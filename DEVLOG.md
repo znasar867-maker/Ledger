@@ -1,6 +1,6 @@
 # Why i chose this idea
 
-I often see people struggle to keep up with their subscription therefore i chose to this top.this is also a problem i can personally relate to.
+I chose this idea because I often see people struggle to keep track of their subscriptions and stay on top of recurring payments. This is also a problem I can personally relate to, as it can be easy to forget about subscriptions when they renew automatically. I wanted to create a solution that makes it easier for users to monitor their subscriptions, understand their recurring expenses, and avoid unexpected charges.
 
 # Every feature implemented
 
