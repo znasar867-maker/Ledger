@@ -185,19 +185,29 @@ All subscription records remain in the user's browser.
 # Tech Stack
 Frontend
 HTML5
-CSS3
+
+CSS
+
 JavaScript
+
 Browser Storage
+
 Web Storage API
+
 localStorage
+
 Architecture
 
 The application is a client-side, multi-page web application consisting of:
 
 index.html
+
 audit.html
+
 insights.html
+
 style.css
+
 app.js
 
 
@@ -218,33 +228,52 @@ index.html
 The Home page provides:
 
 Monthly spending summary
+
 Yearly spending summary
+
 Number of subscriptions
+
 Possible cuts
+
 Upcoming charges
+
 Category spending
+
 Quick navigation to Audit and Insights
+
 audit.html
 
 The Audit page provides:
 
 Subscription entry form
+
 Streaming-site selection
+
 Upcoming charge timeline
+
 Subscription ledger
+
 Edit functionality
+
 Delete functionality
+
 Clear-all functionality
 insights.html
 
 The Insights page provides:
 
 Spending statistics
+
 Upcoming renewals
+
 Expensive subscription analysis
+
 Possible cuts
+
 Category spending breakdown
+
 Complete subscription records
+
 style.css
 
 Contains the visual styling for the application.
@@ -254,14 +283,23 @@ app.js
 Contains the shared application logic, including:
 
 Local storage
+
 Subscription management
+
 Date calculations
+
 Cost calculations
+
 Audit rendering
+
 Home page rendering
+
 Insights rendering
+
 Streaming-site handling
+
 Editing and deleting subscriptions
+
 Installation & Setup
 
 No backend server, database, package manager, or external dependencies are required.
@@ -297,6 +335,7 @@ The HTML files should contain:
 <link rel="stylesheet" href="style.css">
 
 How to Run the Project
+
 Option 1: Open Directly in a Browser
 
 The simplest way to run the application is to open:
@@ -314,15 +353,20 @@ Option 2: Use VS Code Live Server
 
 If using Visual Studio Code:
 
-Open the project folder in VS Code.
+Open the project folder in VS Code
+.
 Install the Live Server extension if it is not already installed.
+
 Right-click index.html.
+
 Select Open with Live Server.
+
 The application will open in the browser.
 
 The project does not require:
 
 npm install
+
 npm start
 
 
@@ -414,16 +458,23 @@ Browser Compatibility
 The project requires a modern browser with support for:
 
 HTML5
-CSS3
+
+CSS
+
 JavaScript
+
 localStorage
 
 Recommended browsers include current versions of:
 
 Google Chrome
+
 Microsoft Edge
+
 Mozilla Firefox
+
 Safari
+
 Privacy
 
 The application does not connect to a bank account or financial institution.
