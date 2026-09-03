@@ -148,5 +148,7 @@ All subscription records remain in the user's browser.
 # Future Improvements
 
 Currency selection
+
 Subscription reminders
+
 Different mode
