@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Subscription Audit</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="site-wrap">
+      <nav class="nav">
+        <div class="nav-brand">SUBSCRIPTION LEDGER</div>
+
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a class="active" href="audit.html">Audit</a>
+          <a href="insights.html">Insights</a>
+        </div>
+      </nav>
+
+      <div class="receipt-wrap">
+        <div class="receipt-body">
+          <header class="receipt-header">
+            <h1>Subscription Audit</h1>
+            <div class="subline" id="todayLine"></div>
+          </header>
+
+          <!-- SUMMARY -->
+
+          <section aria-label="Summary">
+            <div class="summary-row" id="summaryRow"></div>
+          </section>
+
+          <!-- ADD FORM -->
+
+          <section aria-label="Add subscription">
+            <h2 class="section-title">Log a line item</h2>
+
+            <form class="add-form" id="subForm">
+              <div class="field-full">
+                <label for="f-name">Name</label>
+
+                <input
+                  type="text"
+                  id="f-name"
+                  placeholder="e.g. Netflix"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="f-cost">Cost ($)</label>
+
+                <input
+                  type="number"
+                  id="f-cost"
+                  min="0"
+                  step="0.01"
+                  placeholder="0.00"
+                  required
+                />
+              </div>
+
+              <div>
+                <label for="f-cycle">Billing cycle</label>
+
+                <select id="f-cycle">
+                  <option value="monthly">Monthly</option>
+                  <option value="weekly">Weekly</option>
+                  <option value="yearly">Yearly</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="f-next">Next charge date</label>
+
+                <input type="date" id="f-next" required />
+              </div>
+
+              <div>
+                <label for="f-used">Last used</label>
+
+                <input type="date" id="f-used" />
+              </div>
+
+              <div class="field-full">
+                <label for="f-category"> Category </label>
+
+                <select id="f-category">
+                  <option value="">Select category</option>
+
+                  <option value="Streaming">Streaming</option>
+
+                  <option value="Software">Software</option>
+
+                  <option value="Fitness">Fitness</option>
+
+                  <option value="Music">Music</option>
+
+                  <option value="News">News</option>
+
+                  <option value="Utilities">Utilities</option>
+
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div
+                class="field-full"
+                id="streamingSiteField"
+                style="display: none"
+              >
+                <label for="f-streaming-site"> Streaming site </label>
+
+                <select id="f-streaming-site">
+                  <option value="">Select streaming site</option>
+
+                  <option value="Netflix">Netflix</option>
+
+                  <option value="Amazon Prime Video">Amazon Prime Video</option>
+
+                  <option value="Disney+">Disney+</option>
+
+                  <option value="Hulu">Hulu</option>
+
+                  <option value="Max">Max</option>
+
+                  <option value="Apple TV+">Apple TV+</option>
+
+                  <option value="Paramount+">Paramount+</option>
+
+                  <option value="Peacock">Peacock</option>
+
+                  <option value="YouTube Premium">YouTube Premium</option>
+
+                  <option value="Spotify">Spotify</option>
+
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-msg" id="formMsg"></div>
+
+              <div class="form-actions">
+                <button type="submit" id="submitBtn">Add line</button>
+
+                <button
+                  type="button"
+                  class="secondary"
+                  id="cancelEditBtn"
+                  style="display: none"
+                >
+                  Cancel edit
+                </button>
+              </div>
+            </form>
+          </section>
+
+          <!-- TIMELINE -->
+
+          <section aria-label="Upcoming charges">
+            <h2 class="section-title">Next 45 days</h2>
+
+            <div class="timeline-scroll">
+              <div class="timeline-track" id="timelineTrack"></div>
+            </div>
+          </section>
+
+          <!-- LEDGER -->
+
+          <section aria-label="Subscription ledger">
+            <h2 class="section-title">Ledger</h2>
+
+            <div id="ledgerList"></div>
+          </section>
+
+          <div class="footer-line">
+            Everything here is logged by hand. Nothing is pulled from your bank.
+
+            <br />
+
+            <button type="button" class="secondary" id="clearAllBtn">
+              Clear all entries
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", initAudit);
+    </script>
+  </body>
+</html>

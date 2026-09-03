@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Subscription Insights</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="site-wrap">
+      <nav class="nav">
+        <div class="nav-brand">SUBSCRIPTION LEDGER</div>
+
+        <div class="nav-links">
+          <a href="index.html"> Home </a>
+
+          <a href="audit.html"> Audit </a>
+
+          <a class="active" href="insights.html"> Insights </a>
+        </div>
+      </nav>
+
+      <main class="insights">
+        <section class="page-heading">
+          <p class="eyebrow">DATA / BUDGET REVIEW</p>
+
+          <h1>
+            Where could<br />
+            your money go instead?
+          </h1>
+
+          <p>
+            A visual breakdown of your recurring subscriptions, upcoming charges
+            and possible savings.
+          </p>
+        </section>
+
+        <!-- BIG NUMBERS -->
+
+        <section class="stats-grid" id="insightStats"></section>
+
+        <!-- RENEWALS -->
+
+        <section class="paper panel">
+          <div class="panel-heading">
+            <div>
+              <p class="eyebrow">ATTENTION</p>
+
+              <h2>Coming to an end / renewing soon</h2>
+            </div>
+          </div>
+
+          <div id="renewalList"></div>
+        </section>
+
+        <!-- EXPENSIVE -->
+
+        <section class="paper panel">
+          <p class="eyebrow">COST ANALYSIS</p>
+
+          <h2>Most expensive subscriptions</h2>
+
+          <div id="expensiveList"></div>
+        </section>
+
+        <!-- CUTS -->
+
+        <section class="paper panel cut-panel">
+          <p class="eyebrow red">BUDGET OPPORTUNITIES</p>
+
+          <h2>Possible cuts</h2>
+
+          <p class="small-text">
+            These are subscriptions that may deserve a second look. The app
+            flags services that have not been used for 60+ days and highlights
+            their potential savings.
+          </p>
+
+          <div id="cutList"></div>
+
+          <div id="savingBox" class="saving-box"></div>
+        </section>
+
+        <!-- CATEGORY CHART -->
+
+        <section class="paper panel">
+          <p class="eyebrow">SPENDING BREAKDOWN</p>
+
+          <h2>Monthly spending by category</h2>
+
+          <div id="categoryChart"></div>
+        </section>
+
+        <!-- ALL DATA -->
+
+        <section class="paper panel">
+          <p class="eyebrow">COMPLETE DATA</p>
+
+          <h2>Subscription records</h2>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Category</th>
+                  <th>Streaming Site</th>
+                  <th>Cost</th>
+                  <th>Monthly</th>
+                  <th>Next charge</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+
+              <tbody id="dataTable"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="insight-footer">
+          <a href="audit.html" class="button"> Manage subscriptions </a>
+
+          <a href="index.html" class="button secondary-button"> Back home </a>
+        </section>
+      </main>
+
+      <footer>Subscription Ledger · All data stays in your browser.</footer>
+    </div>
+
+    <script src="app.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", renderInsights);
+    </script>
+  </body>
+</html>
